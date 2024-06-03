@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card with Image and Text</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 20px;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+    flex: 1 1 calc(33% - 20px);
+    min-width: 300px;
+}
+
+.card-image {
+    width: 50%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.text-section {
+    margin-bottom: 20px;
+}
+
+.text-section h2 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.text-section p {
+    margin: 0;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+    }
+    
+    .card-image, .card-content {
+        width: 100%;
+    }
+    
+    .card-image {
+        height: 100px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="cards-container">
+        <div class="card">
+            <img src="images/muçarela.png" alt="Delicious Pizza 1" class="card-image">
+            <div class="card-content">
+                <div class="text-section">
+                    <h2>Pizza Margherita</h2>
+                    <p>Experimente a nossa pizza Margherita, uma clássica combinação de molho de tomate, queijo e manjericão fresco.</p>
+                <br>
+                    <p>Grande | R$45,90<br>
+                    Mini| R$ 29,90</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="pizza2.jpg" alt="Delicious Pizza 2" class="card-image">
+            <div class="card-content">
+                <div class="text-section">
+                    <h2>Pizza Pepperoni</h2>
+                    <p>Desfrute da nossa pizza Pepperoni, com fatias generosas de pepperoni sobre queijo derretido e massa crocante.</p>
+                </div>
+                <div class="text-section">
+                    <h2>Bebida Recomendada</h2>
+                    <p>Uma cerveja artesanal IPA complementa perfeitamente os sabores picantes do pepperoni.</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="pizza3.jpg" alt="Delicious Pizza 3" class="card-image">
+            <div class="card-content">
+                <div class="text-section">
+                    <h2>Pizza Quatro Queijos</h2>
+                    <p>Saboreie a nossa pizza Quatro Queijos, uma combinação cremosa de queijos Mozzarella, Gorgonzola, Parmesão e Provolone.</p>
+                </div>
+                <div class="text-section">
+                    <h2>Bebida Recomendada</h2>
+                    <p>Um vinho branco encorpado, como um Chardonnay, é a escolha ideal para esta pizza rica em sabores.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
